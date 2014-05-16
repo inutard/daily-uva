@@ -30,7 +30,7 @@ def get_problem_html(prob_code):
     print '<div>Problem taken from <a href="{0}">here</a></div>'.format(judge_site + request_param)
     print '<hr>'
 
-    #print str(problem_html).decode('utf-8', 'ignore')
+    print str(problem_html).decode('utf-8', 'ignore')
 
 # preliminary stuff to make site look ok
 print '<!DOCTYPE html>'
