@@ -40,10 +40,10 @@ print '<html>'
 print '<head>'
 
 print '<title>500pauls.com</title>'
-#print '<meta http-equiv="Content-type" content="text/html;charset=UTF-8">'
-#print '<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">'
-#print '<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">'
-#print '<link charset="utf-8" href="http://worker.codeforces.ru/static/combine/532a51f3e21ab4661013f28aa2665e53_429c63982abfce9ee19b92499fdeb13f.css" rel="stylesheet" type="text/css">'
+print '<meta http-equiv="Content-type" content="text/html;charset=UTF-8">'
+print '<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">'
+print '<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">'
+print '<link charset="utf-8" href="http://worker.codeforces.ru/static/combine/532a51f3e21ab4661013f28aa2665e53_429c63982abfce9ee19b92499fdeb13f.css" rel="stylesheet" type="text/css">'
 print '</head>'
 
 print '<body class="container">'
@@ -71,8 +71,8 @@ with open('used_problems.txt', 'a+') as ufile:
 
     print '<hr>'
 
-#print '<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>'
-#print '<script type="text/javascript" src="js/bootstrap.min.js"></script>'
+print '<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>'
+print '<script type="text/javascript" src="js/bootstrap.min.js"></script>'
 print '</body>'
 print '</html>'
 
