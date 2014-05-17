@@ -34,7 +34,7 @@ def get_problem_html(prob_code):
         return False
     
     # really bad. prints to html of page
-    out.append('<div>Problem taken from <a href="{0}">here</a></div>'.format(judge_site + request_param))
+    out.append('<div style="font-size: 14px">Problem taken from <a href="{0}" style="color: blue">here</a>.</div>'.format(judge_site + request_param))
     out.append('<hr>')
     out.append(output_html)
     
@@ -42,13 +42,11 @@ def get_problem_html(prob_code):
 
 out = []
 # preliminary stuff to make site look ok
-out.append('<!DOCTYPE html>')
 out.append('<html>')
 
 out.append('<head>')
 
 out.append('<title>500pauls.com</title>')
-out.append('<meta http-equiv="Content-type" content="text/html;charset=UTF-8">')
 
 css = []
 ufile = open('codeforces.css')
@@ -59,7 +57,7 @@ css_string = '\n'.join(css)
 out.append('</head>')
 
 out.append('<body>')
-out.append('<h1>Daily Codeforces</h1>')
+out.append('<h1 style="font-size: 32px; font-weight:bold; margin-bottom: 0.3cm">Daily Codeforces</h1>')
 
 # open saved problems
 with open('used_problems.txt', 'a+') as ufile:
