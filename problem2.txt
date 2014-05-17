@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>500pauls.com</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<link charset="utf-8" href="http://worker.codeforces.ru/static/combine/532a51f3e21ab4661013f28aa2665e53_429c63982abfce9ee19b92499fdeb13f.css" rel="stylesheet" type="text/css">
+</head>
+<body class="container">
+<h1 class="page-header">Daily Codeforces</h1>
+<div>Problem taken from <a href="http://codeforces.com/problemset/problem/282/D">here</a></div>
+<hr>
+<div class="problem-statement"><div class="header"><div class="title">D. Yet Another Number Game</div><div class="time-limit"><div class="property-title">time limit per test</div>2 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file"><div class="property-title">input</div>standard input</div><div class="output-file"><div class="property-title">output</div>standard output</div></div><div><p>Since most contestants do not read this part, I have to repeat that Bitlandians are quite weird. They have their own jobs, their own working method, their own lives, their own sausages and their own games!</p><p>Since you are so curious about Bitland, I'll give you the chance of peeking at one of these games.</p><p>BitLGM and BitAryo are playing yet another of their crazy-looking genius-needed Bitlandish games. They've got a sequence of <span class="tex-span"><i>n</i></span> non-negative integers <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>, <i>a</i><sub class="lower-index">2</sub>, ..., <i>a</i><sub class="lower-index"><i>n</i></sub></span>. The players make moves in turns. BitLGM moves first. Each player can and must do one of the two following actions in his turn:</p><ul> <li> Take one of the integers (we'll denote it as <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span>). Choose integer <span class="tex-span"><i>x</i></span> <span class="tex-span">(1 <= <i>x</i> <= <i>a</i><sub class="lower-index"><i>i</i></sub>)</span>. And then decrease <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> by <span class="tex-span"><i>x</i></span>, that is, apply assignment: <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub> = <i>a</i><sub class="lower-index"><i>i</i></sub> - <i>x</i></span>. </li><li> Choose integer x. And then decrease all <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> by <span class="tex-span"><i>x</i></span>, thai,
