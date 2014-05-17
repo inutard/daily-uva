@@ -1,7 +1,7 @@
 #!/usr/bin/python2.7 -S
 
-#import sys #was for debugging
-#sys.setdefaultencoding("utf-8")
+import sys #was for debugging
+sys.setdefaultencoding("utf-8")
 import site
 
 from pynliner import Pynliner
@@ -30,7 +30,8 @@ def get_problem_html(prob_code):
     problem_html = soup.find('div', {'class': 'problem-statement'})
 
 
-    output_html = unidecode(str(problem_html).decode('utf-8', 'ignore'))
+    #output_html = unidecode(str(problem_html).decode('utf-8', 'ignore'))
+    output_html = str(problem_html).decode('utf-8', 'ignore')
     if output_html == 'None':
         return False
     
@@ -52,6 +53,7 @@ out.append('<html>')
 out.append('<head>')
 
 out.append('<title>500pauls.com</title>')
+out.append('<meta http-equiv="Content-type" content="text/html;charset=UTF-8">')
 
 css = []
 ufile = open('codeforces.css')
