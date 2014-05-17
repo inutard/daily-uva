@@ -13,7 +13,8 @@ from unidecode import unidecode
 from BeautifulSoup import BeautifulSoup
 import datetime
 import urllib2
-    
+import re
+ 
 def get_problem_html(prob_code):
     # currently only grabs from codeforces
     judge_site = 'http://codeforces.com/'
@@ -36,6 +37,10 @@ def get_problem_html(prob_code):
     # really bad. prints to html of page
     out.append('<div style="font-size: 14px">Problem taken from <a href="{0}" style="color: blue">here</a>.</div>'.format(judge_site + request_param))
     out.append('<hr>')
+
+    add_colon = ['time limit per test', 'memory limit per test', 'input', 'output']
+    for phrase in add_colon:
+        output_html = re.sub('>{}<'.format(phrase),'>{}:  <'.format(phrase), output_html)
     out.append(output_html)
     
     return True

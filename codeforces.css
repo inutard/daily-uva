@@ -238,10 +238,10 @@ div.ttypography .MathJax{color:black!important}
 .problem-statement ul{list-style:disc;list-style-type:disc;list-style-position:outside;margin-top:1em!important;margin-bottom:1em!important}
 .problem-statement ol{list-style:decimal;list-style-type:decimal;list-style-position:outside;margin-top:1em!important;margin-bottom:1em!important}
 .problem-statement li{line-height:1.5em;margin-left:3em}
-.problem-statement .property-title{display:inline;padding-right:4px}
-.problem-statement .property-title:after{content:":"}
-.problem-statement .time-limit,.problem-statement .memory-limit,.problem-statement .input-file,.problem-statement .output-file{margin:0 auto}
+.property-title{display:inline;padding-right:4px}
+.property-title:after{content:":"}
 .problem-statement .legend{margin-bottom:1em}
+.time-limit, .memory-limit, .input-file, .output-file{margin:0 auto}
 .problem-statement .section-title{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:115%;font-weight:bold}
 .problem-statement .output-specification{margin-bottom:1em}
 .problem-statement .sample-tests .input,.problem-statement .sample-tests .output{border:1px solid #888}
