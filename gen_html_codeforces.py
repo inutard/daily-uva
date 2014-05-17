@@ -4,6 +4,7 @@
 #sys.setdefaultencoding("utf-8")
 import site
 
+from pynliner import Pynliner
 from os import listdir
 from os.path import isfile, join
 from random import randint
@@ -27,31 +28,38 @@ def get_problem_html(prob_code):
     soup = BeautifulSoup(html_code) 
     problem_html = soup.find('div', {'class': 'problem-statement'})
 
+
+    output_html = unidecode(str(problem_html).decode('utf-8', 'ignore'))
+    if output_html == 'None':
+        return False
+    
     # really bad. prints to html of page
-    print '<div>Problem taken from <a href="{0}">here</a></div>'.format(judge_site + request_param)
-    print '<hr>'
+    out.append('<div>Problem taken from <a href="{0}">here</a></div>'.format(judge_site + request_param))
+    out.append('<hr>')
+    out.append(output_html)
+    
+    return True
 
-    print unidecode(str(problem_html).decode('utf-8', 'ignore'))
-
+out = []
 # preliminary stuff to make site look ok
-print '<!DOCTYPE html>'
-print '<html>'
+out.append('<!DOCTYPE html>')
+out.append('<html>')
 
-print '<head>'
+out.append('<head>')
 
-print '<title>500pauls.com</title>'
-print '<meta http-equiv="Content-type" content="text/html;charset=UTF-8">'
+out.append('<title>500pauls.com</title>')
+out.append('<meta http-equiv="Content-type" content="text/html;charset=UTF-8">')
 
-print '<style>'
+css = []
 ufile = open('codeforces.css')
 for line in ufile.readlines():
-	print line
-print '</style>'
+    css.append(line)
+css_string = '\n'.join(css)
+	
+out.append('</head>')
 
-print '</head>'
-
-print '<body class="container">'
-print '<h1 class="page-header">Daily Codeforces</h1>'
+out.append('<body>')
+out.append('<h1>Daily Codeforces</h1>')
 
 # open saved problems
 with open('used_problems.txt', 'a+') as ufile:
@@ -66,15 +74,23 @@ with open('used_problems.txt', 'a+') as ufile:
             if prob_code in used_probs:
                 raise Exception('This code is terrible.')
 
-            get_problem_html(prob_code)
+            if not get_problem_html(prob_code):
+                raise Exception('This code is terrible.')
+                
             ufile.write(str(prob_code) + '\n')
             break
         except:
             pass
 
 
-    print '<hr>'
-	
-print '</body>'
-print '</html>'
+    out.append('<hr>')
+    
+out.append('</body>')
+out.append('</html>')
 
+preinline_html = '\n'.join(out)
+
+final_p = Pynliner().from_string(preinline_html).with_cssString(css_string)
+final_html = final_p.run()
+
+print final_html
